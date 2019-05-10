@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!--Spring boot logback log default config-->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}/spring.log}"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <!--Rewrite Spring Boot org/springframework/boot/logging/logback/file-appender.xml config-->
+    <appender name="TIME_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+        <file>${LOG_FILE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--Log file name-->
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <!--Keep the history log for one month-->
+            <maxHistory>30</maxHistory>
+            <!--default log file would split when 10M. By setting like this, the log file will split at 100M-->
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+
+        </rollingPolicy>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="TIME_FILE" />
+    </root>
+
+</configuration>
+        <!--
+            1、Extends Spring boot logback setting（logging.* can be edited at appliaction.yml or application.properties)
+            2、rewrite default configuration，when the log file at 100M，split by date，the category after split would like these：
+
+                blog.2019-08-01.0   80MB
+                blog.2019-08-01.1   10MB
+                blog.2019-08-02.0   56MB
+                blog.2019-08-03.0   53MB
+                ......
+        -->

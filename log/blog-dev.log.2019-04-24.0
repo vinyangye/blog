@@ -1,0 +1,10 @@
+2019-04-24 00:29:17.733  WARN 31392 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=38m39s93ms).
+2019-04-24 02:30:14.750  WARN 31392 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=2h26s950ms).
+2019-04-24 04:30:42.097  WARN 31392 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=2h27s347ms).
+2019-04-24 04:31:11.706  WARN 31392 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Retrograde clock change detected (housekeeper delta=29s609ms), soft-evicting connections from pool.
+2019-04-24 06:31:38.623  WARN 31392 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=2h26s917ms).
+2019-04-24 19:51:30.839  WARN 31392 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=13h19m22s189ms).
+2019-04-24 19:52:05.075  INFO 31392 --- [Thread-51] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-24 19:52:05.079  INFO 31392 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-24 19:52:05.087  INFO 31392 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-04-24 19:52:05.091  INFO 31392 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.

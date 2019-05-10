@@ -1,0 +1,5 @@
+2019-04-22 13:03:47.786  INFO 15915 --- [restartedMain] com.vinyangy.blog.BlogApplication        : Starting BlogApplication on yedeMacBook-Pro.local with PID 15915 (/Users/yeyang/Desktop/CodeLearn/blog/target/classes started by yeyang in /Users/yeyang/Desktop/CodeLearn/blog)
+2019-04-22 13:03:47.791  INFO 15915 --- [restartedMain] com.vinyangy.blog.BlogApplication        : The following profiles are active: pro
+2019-04-22 13:03:53.293  WARN 15915 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-22 13:03:53.393  WARN 15915 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-22 13:03:53.729  INFO 15915 --- [restartedMain] com.vinyangy.blog.BlogApplication        : Started BlogApplication in 7.012 seconds (JVM running for 8.947)
