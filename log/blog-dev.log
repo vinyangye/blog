@@ -279,3 +279,5 @@
 2019-05-11 12:32:12.659  INFO 48266 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
 2019-05-11 12:32:13.011  INFO 48266 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2019-05-11 12:32:13.016  INFO 48266 --- [restartedMain] com.vinyangy.blog.BlogApplication        : Started BlogApplication in 7.825 seconds (JVM running for 10.005)
+2019-05-11 13:26:28.946  WARN 48266 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m18s582ms).
+2019-05-11 15:44:08.243  WARN 48266 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h57m38s856ms).
