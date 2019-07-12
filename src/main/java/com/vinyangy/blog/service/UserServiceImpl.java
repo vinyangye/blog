@@ -3,6 +3,7 @@ package com.vinyangy.blog.service;
 
 import com.vinyangy.blog.dao.UserRepository;
 import com.vinyangy.blog.po.User;
+import com.vinyangy.blog.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,13 +14,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
+
     @Autowired
     private UserRepository userRepository;
+
 
     @Override
     public User loginAuthentication(String username, String password) {
 
-        User user = userRepository.findByUserNameAndPassword(username, password);
+        User user = userRepository.findByUserNameAndPassword(username, MD5Utils.encrypt(password));
         return user;
     }
 }

@@ -6,9 +6,9 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by yeyang on 2019-05-11.
+ * @author yeyang
+ * @Date 2019-05-11
  */
-
 @Entity
 @Table(name = "t_blog")
 public class Blog {
@@ -23,18 +23,18 @@ public class Blog {
     private Integer views;
     private boolean apprecication;
     private boolean shareStatement;
-    private boolean commentAbled;
+    private boolean commentActive;
     private boolean published;
     private boolean recommend;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date updatTime;
+    private Date updateTime;
 
     @ManyToOne
     private Category category;
 
-    //new blog with a new tag, will save to db automatically
+    /** new blog with a new tag, will save to db automatically */
     @ManyToMany(cascade = {CascadeType.PERSIST})
     private List<Tag> tags = new ArrayList<>();
 
@@ -111,12 +111,12 @@ public class Blog {
         this.shareStatement = shareStatement;
     }
 
-    public boolean isCommentAbled() {
-        return commentAbled;
+    public boolean isCommentActive() {
+        return commentActive;
     }
 
-    public void setCommentAbled(boolean commentAbled) {
-        this.commentAbled = commentAbled;
+    public void setCommentActive(boolean commentActive) {
+        this.commentActive = commentActive;
     }
 
     public boolean isPublished() {
@@ -143,12 +143,12 @@ public class Blog {
         this.createTime = createTime;
     }
 
-    public Date getUpdatTime() {
-        return updatTime;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setUpdatTime(Date updatTime) {
-        this.updatTime = updatTime;
+    public void setUpdatTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 
     public Category getCategory() {
@@ -194,11 +194,11 @@ public class Blog {
                 ", views=" + views +
                 ", apprecication=" + apprecication +
                 ", shareStatement=" + shareStatement +
-                ", commentAbled=" + commentAbled +
+                ", commentActive=" + commentActive +
                 ", published=" + published +
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
-                ", updatTime=" + updatTime +
+                ", updateTime=" + updateTime +
                 '}';
     }
 }
